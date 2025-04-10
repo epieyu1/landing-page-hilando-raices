@@ -1,0 +1,301 @@
+/* ==== RESET UNIVERSAL ==== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==== VARIABLES DE COLOR ==== */
+:root {
+    --color-principal: #E67E22;
+    --color-fondo: #ffffff;
+    --color-texto: #3e2f1c;
+    --color-secundario: #2C3E50;
+    --color-hover: #b3541e;
+}
+
+/* ==== TIPOGRAFÍA Y FONDO ==== */
+body {
+    font-family: 'Gochi Hand', cursive;
+    background-color: var(--color-fondo);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 1rem;     /* Espacio arriba */
+    padding-bottom: 2rem;  /* Espacio abajo */
+}
+
+/* ==== CONTENEDOR PRINCIPAL ==== */
+.container-principal {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: auto;
+    background-color: var(--color-fondo);
+    box-shadow: 0 0 30px rgba(241, 186, 133, 0.5);
+    border-radius: 0.2rem;
+    padding: 2rem;
+}
+
+/* ==== NAVBAR TRADICIONAL ==== */
+.navbar {
+    width: 100%;
+    height: 4rem;
+    background-color: var(--color-secundario);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0.5rem;
+    top: 0;
+    z-index: 1000;
+    padding: 1rem;
+    box-shadow: 0 0.2rem 0.4rem rgba(218, 114, 45, 0.973);
+}
+
+nav {
+    margin-top: 4rem;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--color-principal);
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding-bottom: 4rem;
+}
+
+.nav-links a {
+    font-size: 1.5rem;
+    color: var(--color-principal);
+    transition: color 0.3s ease, transform 0.3s ease;
+    text-decoration-color: var(--color-principal);
+}
+
+.nav-links a:hover {
+    color: var(--color-hover);
+    transform: translateY(-2px);
+}
+
+
+
+
+
+/* ==== SECCIONES ==== */
+h1 {
+    font-size: 2.5rem;
+    color: var(--color-secundario);
+    margin-bottom: 2rem;
+}
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 0.6rem;
+    width: 100%;
+    height: auto;
+    
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+.hero p {
+    margin-top: 1rem;
+    font-size: 1.7rem;
+}
+
+.beneficios {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 1rem;
+    background-color: var(--color-fondo);
+    margin-top: 1rem;
+    padding: 2rem;
+}
+
+.galeria {
+    width: 100%;
+    border-radius: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    
+    
+}
+
+li {
+    list-style: none;
+    margin: 1rem 0;
+    padding: 1rem;
+    background: var(--color-principal);
+    border-radius: 0.5rem;
+    box-shadow: 0 0.2rem 0.4rem rgba(0,0,0,0.05);
+    color: #000;
+    font-size: 1.4rem;
+}
+
+/* ==== SLIDER DE GALERÍA ==== */
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: 25rem;
+    overflow: hidden;
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 0.5rem;
+    flex-shrink: 0;
+    display: block;
+    margin: 0 auto;
+    background-color:var(--color-secundario);
+}
+
+.slider-btn {
+    position: absolute;
+    transform: translateY(-50%);
+   
+    color: var(--color-secundario);
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    transition: background 0.3s ease;
+}
+
+.slider-btn:hover {
+    background: var(--color-hover);
+}
+
+.slider-btn.prev {
+    left: 10px;
+}
+
+.slider-btn.next {
+    right: 10px;
+}
+
+/* ==== FORMULARIO ==== */
+form {
+    font-family: 'Gochi Hand', cursive;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+input, textarea {
+    font-family: 'Gochi Hand', cursive;
+    font-size: 1.2rem;
+    padding: 0.7rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+    background: #f9f3ef;
+}
+
+button {
+    background: var(--color-principal);
+    width: auto;
+    color: white;
+    padding: 0.7rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.616);
+}
+
+button:hover {
+    background: var(--color-hover);
+}
+
+.btn-enviar{
+    width: 19rem;
+    margin: 0 auto;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-family: 'Gochi Hand', cursive;
+    margin-bottom: 1rem;
+}
+
+/* ==== BOTÓN WHATSAPP ==== */
+.whatsapp-button {
+    font-size: 1.3rem;
+    font-weight: 500;
+    display: inline-block;
+    background: #1a8b5c;
+    color: black;
+    padding: 1.2rem;
+    border-radius: 1rem;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.05);
+}
+
+/* ==== FOOTER ==== */
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    background-color: var(--color-secundario);
+    margin-top: 0.5rem;
+    padding: 1rem 0;
+    height: 5rem;
+    box-shadow: 0 0.2rem 0.4rem rgb(0, 0, 0);
+    width: auto;
+}
+
+.footer-copy {
+    margin-top: 2rem;
+    margin-right: 10rem;
+    color: #f8f1f1;
+    font-size: 1.2rem;
+}
+
+.redes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+footer .redes a img {
+    width: auto;
+    height: 2.5rem;
+    margin-top: 1.5rem;
+}
+
+footer .redes a:hover img {
+    transform: scale(1.3);
+    transition: transform 0.3s ease;
+
+}
