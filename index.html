@@ -57,13 +57,17 @@
 
       <section id="contacto">
         <h2>Inscríbete al taller</h2>
-        <form name="contactos" netlify>
-          <input type="text" placeholder="Nombre completo" required />
-          <input type="number" placeholder="Numero de celular" required />
-          <input type="email" placeholder="Correo electrónico" required />
-          <textarea placeholder="¿Qué te gustaría aprender?" rows="4"></textarea>
-          <button type="submit" class="btn-enviar">Enviar inscripción</button>
-        </form>
+        <form name="contactos" method="POST" netlify>
+            <input type="hidden" name="form-name" value="contactos" />
+            
+            <input type="text" name="nombre" placeholder="Nombre completo" required />
+            <input type="number" name="telefono" placeholder="Número de celular" required />
+            <input type="email" name="correo" placeholder="Correo electrónico" required />
+            <textarea name="mensaje" placeholder="¿Qué te gustaría aprender?" rows="4"></textarea>
+          
+            <button type="submit" class="btn-enviar">Enviar inscripción</button>
+          </form>
+          
         
       </section>
     </main>
