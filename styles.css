@@ -167,6 +167,7 @@ li {
 .slider img {
     width: 100%;
     height: 100%;
+    flex: 0 0 100%;
     object-fit: contain;
     object-position: center;
     border-radius: 0.5rem;
@@ -179,7 +180,6 @@ li {
 .slider-btn {
     position: absolute;
     transform: translateY(-50%);
-   
     color: var(--color-secundario);
     border: none;
     padding: 0.5rem;
@@ -245,21 +245,33 @@ button:hover {
 }
 
 /* ==== BOTÓN WHATSAPP ==== */
-.whatsapp-button {
-    font-size: 1.3rem;
-    font-weight: 500;
+@keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+  
+  .whatsapp-button {
     display: inline-block;
-    background: #1a8b5c;
-    color: black;
-    padding: 1.2rem;
-    border-radius: 1rem;
+    background-color: #25D366;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 30px;
     text-decoration: none;
-    transition: transform 0.3s ease;
-}
-
-.whatsapp-button:hover {
-    transform: scale(1.05);
-}
+    font-family: 'Segoe UI', sans-serif;
+    transition: background-color 0.3s ease;
+    animation: bounce 2s infinite;
+  }
+  
+  .whatsapp-button:hover {
+    background-color: #1ebe5d;
+    animation: none; /* Se detiene al pasar el mouse para evitar distracción */
+  }
+  
 
 /* ==== FOOTER ==== */
 footer {
@@ -299,3 +311,51 @@ footer .redes a:hover img {
     transition: transform 0.3s ease;
 
 }
+
+@media (max-width: 430px) {
+    /* iPhone 12, 13, 14, 14 Pro Max */
+    .container-principal {
+        width: 100%;
+        padding: 1rem;
+    }
+    .navbar {
+        align-items: center;
+        gap: 1rem;
+    }
+
+    footer{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0.3rem;
+    }
+    .footer-copy {
+        margin-top: 2.5rem;
+        flex-direction: column;
+        margin-right: 0.4rem;
+        color: #f8f1f1;
+        font-size: 1.2rem;
+    }
+    .redes {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 0.9rem;
+        margin-left: 1.3rem;
+    }
+    footer .redes a img {
+        width: auto;
+        height: 2.5rem;
+        
+    }
+    footer .redes a:hover img {
+        transform: scale(1.3);
+        transition: transform 0.3s ease;
+    }
+    .hero p {
+        font-size: 1.5rem;
+    }
+    
+  }
+  
